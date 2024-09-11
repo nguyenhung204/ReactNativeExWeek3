@@ -1,7 +1,9 @@
+import { useRouter } from 'expo-router';
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const LoginScreen = () => {
+  const router = useRouter();
   return (
     <View style={styles.container}>
       <View style={styles.circle} />
@@ -18,7 +20,7 @@ const LoginScreen = () => {
         using online server
       </Text>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <TouchableOpacity style={styles.button} onPress={() => router.push('/login')}>
           <Text style={styles.buttonText}>LOGIN</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => {}}>
